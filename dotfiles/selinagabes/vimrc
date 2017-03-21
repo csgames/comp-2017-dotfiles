@@ -1,0 +1,31 @@
+
+execute pathogen#infect()
+filetype plugin on
+filetype indent on
+
+sytax on
+
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
+
+set showmatch
+set nobackup
+set noswapfile
+
+set backspace=indent,eol,start
+set number
+set hlsearch
+
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+nnoremap <Leader><Leader> :e#<CR>
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+map <D-A-RIGHT> <C-w>l
+map <D-A-LEFT> <C-w>h
+map <D-A-DOWN> <C-w><C-w>
+map <D-A-UP> <C-w>W
