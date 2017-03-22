@@ -1,0 +1,42 @@
+syntax enable
+
+set backspace=indent,eol,start
+
+"Spacing -->
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
+set nowrap
+
+execute pathogen#infect()
+filetype plugin on
+filetype indent on
+
+"UI -->
+set number
+set showcmd
+set showmatch
+
+"Search -->
+set ignorecase
+set hlsearch
+
+"Backup and Swap -->
+set nobackup
+set noswapfile
+
+"Clear Search Highlight -->
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+
+nnoremap <Leader><Leader> :e#<CR>
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+"Use Arrow Keys
+map <D-A-RIGHT> <C-w>l
+map <D-A-LEFT> <C-w>h
+map <D-A-DOWN> <C-w><C-w>
+map <D-A-UP> <C-w>W
+
