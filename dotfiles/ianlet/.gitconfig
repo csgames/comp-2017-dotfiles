@@ -1,0 +1,10 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+[user]
+	name = Ian Létourneau
+	email = letourneau.ian@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
